@@ -1,6 +1,6 @@
 
 import Buton from '../buton/Buton';
-import'./Card.css';
+import CardStyle from './Card.module.css';
 
 //* module.css'de derleyici CSS class'larini alarak bunlari unique olacak
 //* sekilde yeniden adlandirir. (Ornek: card_title__XaSde)
@@ -12,8 +12,8 @@ import'./Card.css';
 const Card = ({img,language,btn}) => {
   return (
     <div>
-      <h1>{language}</h1>
-      <img src={img} alt="" />
+      <h1 className={CardStyle['title']}>{language}</h1>
+      <img className='images' src={img} alt="" />
       <Buton btn={btn}/>
     </div>
   )
